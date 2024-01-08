@@ -989,11 +989,25 @@ public struct AnyReducer<State, Action, Environment> {
       return self.reducer(&state!, action, environment)
     }
   }
-
-  /// This API has been soft-deprecated in favor of
-  /// ``ReducerProtocol/forEach(_:action:_:file:fileID:line:)``. Read
-  /// <doc:MigratingToTheReducerProtocol> for more information.
-  ///
+    
+    public func forgivingOptonal(
+        file: StaticString = #fileID,
+        line: UInt = #line
+    ) -> Reducer<
+        State?, Action, Environment
+    > {
+        .init { state, action, environment in
+            guard state != nil else {
+                return .none
+            }
+            return self.reducer(&state!, action, environment)
+        }
+    }
+    
+    /// This API has been soft-deprecated in favor of
+    /// ``ReducerProtocol/forEach(_:action:_:file:fileID:line:)``. Read
+    /// <doc:MigratingToTheReducerProtocol> for more information.
+    ///
   /// A version of ``pullback(state:action:environment:)`` that transforms a reducer that works on
   /// an element into one that works on an identified array of elements.
   ///
