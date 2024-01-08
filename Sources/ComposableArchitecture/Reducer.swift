@@ -634,6 +634,20 @@ public struct Reducer<State, Action, Environment> {
     }
   }
 
+    public func forgivingOptonal(
+      file: StaticString = #fileID,
+      line: UInt = #line
+    ) -> Reducer<
+      State?, Action, Environment
+    > {
+      .init { state, action, environment in
+        guard state != nil else {
+          return .none
+        }
+        return self.reducer(&state!, action, environment)
+      }
+    }
+
   /// A version of ``pullback(state:action:environment:)`` that transforms a reducer that works on
   /// an element into one that works on an identified array of elements.
   ///
