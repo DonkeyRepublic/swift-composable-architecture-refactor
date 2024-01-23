@@ -23,6 +23,7 @@ let package = Package(
     .package(url: "https://github.com/pointfreeco/swift-custom-dump", from: "0.3.0"),
     .package(url: "https://github.com/pointfreeco/swift-identified-collections", from: "0.3.2"),
     .package(url: "https://github.com/pointfreeco/xctest-dynamic-overlay", from: "0.3.2"),
+    .package(url: "https://github.com/apple/swift-collections", from: "1.0.0"),
   ],
   targets: [
     .target(
