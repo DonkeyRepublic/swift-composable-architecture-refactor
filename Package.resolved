@@ -75,11 +75,11 @@
       },
       {
         "package": "swift-dependencies",
-        "repositoryURL": "https://github.com/pointfreeco/swift-dependencies",
+        "repositoryURL": "git@github.com:DonkeyRepublic/swift-dependencies.git",
         "state": {
-          "branch": null,
-          "revision": "16fd42ae04c6e7f74a6a86395d04722c641cccee",
-          "version": "0.6.0"
+          "branch": "feature/0.6.0",
+          "revision": "9bbb16b766c7e7ce2548800b62a91f980089aefc",
+          "version": null
         }
       },
       {
