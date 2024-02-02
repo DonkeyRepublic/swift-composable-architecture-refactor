@@ -15,12 +15,7 @@ let package = Package(
       name: "ComposableArchitecture",
       type: .dynamic,
       targets: ["ComposableArchitecture"]
-    ),
-    .library(
-      name: "Dependencies",
-      type: .dynamic,
-      targets: ["Dependencies"]
-    ),
+    )
   ],
   dependencies: [
     .package(name: "Benchmark", url: "https://github.com/google/swift-benchmark", from: "0.1.0"),
