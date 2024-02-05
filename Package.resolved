@@ -38,15 +38,6 @@
         }
       },
       {
-        "package": "swift-clocks",
-        "repositoryURL": "https://github.com/pointfreeco/swift-clocks",
-        "state": {
-          "branch": null,
-          "revision": "0fbaebfc013715dab44d715a4d350ba37f297e4d",
-          "version": "0.4.0"
-        }
-      },
-      {
         "package": "swift-collections",
         "repositoryURL": "https://github.com/apple/swift-collections",
         "state": {
@@ -71,15 +62,6 @@
           "branch": null,
           "revision": "c9b6b940d95c0a925c63f6858943415714d8a981",
           "version": "0.5.2"
-        }
-      },
-      {
-        "package": "swift-dependencies",
-        "repositoryURL": "git@github.com:DonkeyRepublic/swift-dependencies.git",
-        "state": {
-          "branch": "feature/0.6.0",
-          "revision": "9bbb16b766c7e7ce2548800b62a91f980089aefc",
-          "version": null
         }
       },
       {

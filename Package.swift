@@ -28,14 +28,14 @@ let package = Package(
     .package(url: "https://github.com/pointfreeco/swift-custom-dump", from: "0.3.0"),
     .package(url: "https://github.com/pointfreeco/swift-identified-collections", from: "0.3.2"),
     .package(url: "https://github.com/pointfreeco/xctest-dynamic-overlay", from: "0.3.2"),
-    .package(url: "git@github.com:DonkeyRepublic/swift-dependencies.git", .branch("feature/0.6.0")),
+//    .package(url: "git@github.com:DonkeyRepublic/swift-dependencies.git", .branch("feature/0.6.0")),
   ],
   targets: [
     .target(
       name: "ComposableArchitecture",
       dependencies: [
-//        "Dependencies",
-        .product(name: "Dependencies", package: "swift-dependencies"),
+        "Dependencies",
+//        .product(name: "Dependencies", package: "swift-dependencies"),
         .product(name: "CasePaths", package: "swift-case-paths"),
         .product(name: "CombineSchedulers", package: "combine-schedulers"),
         .product(name: "CustomDump", package: "swift-custom-dump"),
@@ -49,20 +49,20 @@ let package = Package(
         "ComposableArchitecture"
       ]
     ),
-//    .target(
-//      name: "Dependencies",
-//      dependencies: [
-//        .product(name: "CombineSchedulers", package: "combine-schedulers"),
-//        .product(name: "XCTestDynamicOverlay", package: "xctest-dynamic-overlay"),
-//      ]
-//    ),
-//    .testTarget(
-//      name: "DependenciesTests",
-//      dependencies: [
-//        "ComposableArchitecture",
-//        "Dependencies",
-//      ]
-//    ),
+    .target(
+      name: "Dependencies",
+      dependencies: [
+        .product(name: "CombineSchedulers", package: "combine-schedulers"),
+        .product(name: "XCTestDynamicOverlay", package: "xctest-dynamic-overlay"),
+      ]
+    ),
+    .testTarget(
+      name: "DependenciesTests",
+      dependencies: [
+        "ComposableArchitecture",
+        "Dependencies",
+      ]
+    ),
     .executableTarget(
       name: "swift-composable-architecture-benchmark",
       dependencies: [
