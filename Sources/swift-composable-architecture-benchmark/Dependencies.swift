@@ -1,7 +1,7 @@
 import Benchmark
 import Combine
 import ComposableArchitecture
-import Dependencies
+import DependenciesLegacy
 import Foundation
 
 let dependenciesSuite = BenchmarkSuite(name: "Dependencies") { suite in

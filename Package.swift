@@ -34,7 +34,7 @@ let package = Package(
     .target(
       name: "ComposableArchitecture",
       dependencies: [
-        "Dependencies",
+        "DependenciesLegacy",
 //        .product(name: "Dependencies", package: "swift-dependencies"),
         .product(name: "CasePaths", package: "swift-case-paths"),
         .product(name: "CombineSchedulers", package: "combine-schedulers"),
@@ -50,7 +50,7 @@ let package = Package(
       ]
     ),
     .target(
-      name: "Dependencies",
+      name: "DependenciesLegacy",
       dependencies: [
         .product(name: "CombineSchedulers", package: "combine-schedulers"),
         .product(name: "XCTestDynamicOverlay", package: "xctest-dynamic-overlay"),
@@ -60,7 +60,7 @@ let package = Package(
       name: "DependenciesTests",
       dependencies: [
         "ComposableArchitecture",
-        "Dependencies",
+        "DependenciesLegacy",
       ]
     ),
     .executableTarget(
