@@ -13,7 +13,7 @@ let package = Package(
   products: [
     .library(
       name: "ComposableArchitecture",
-      type: .dynamic,
+      type: .static,
       targets: ["ComposableArchitecture"]
     )
   ],
