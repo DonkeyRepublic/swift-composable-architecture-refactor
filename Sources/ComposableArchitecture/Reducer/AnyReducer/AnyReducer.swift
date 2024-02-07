@@ -719,6 +719,22 @@ public struct AnyReducer<State, Action, Environment> {
     }
   }
 
+    public func forgivingOptonal(
+        file: StaticString = #fileID,
+        line: UInt = #line
+    ) -> AnyReducer<
+        State?, Action, Environment
+    > {
+        .init { state, action, environment in
+            guard state != nil else {
+                return .none
+            }
+            return self.reducer(&state!, action, environment)
+        }
+    }
+    
+
+
   /// This API has been soft-deprecated in favor of
   /// ``Reducer/forEach(_:action:element:fileID:line:)``. Read
   /// <doc:MigratingToTheReducerProtocol> for more information.
