@@ -32,7 +32,7 @@ let package = Package(
   ],
   targets: [
     .target(
-      name: "ComposableArchitecture",git 
+      name: "ComposableArchitecture",
       dependencies: [
         .product(name: "CasePaths", package: "swift-case-paths"),
         .product(name: "CombineSchedulers", package: "combine-schedulers"),
